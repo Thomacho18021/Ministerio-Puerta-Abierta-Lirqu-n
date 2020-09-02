@@ -15,13 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txtTitulo;
     private Button btnCambiar;
-    private CheckBox cbNegro ;
-    private CheckBox cbBlanco ;
-    private CheckBox cbAzul ;
-    private CheckBox cbAmarillo ;
-    private CheckBox cbRojo ;
-    private CheckBox cbVerde ;
-    private Button btnHorarios;
+    private CheckBox cbNegro, cbBlanco, cbAzul, cbAmarillo, cbRojo, cbVerde ;
+    private Button btnHorarios, btnAyudanos;
 
 
 
@@ -39,11 +34,19 @@ public class MainActivity extends AppCompatActivity {
         cbRojo = findViewById(R.id.cbRojo);
         cbVerde = findViewById(R.id.cbVerde);
         btnHorarios = findViewById(R.id.btnHorarios);
+        btnAyudanos = findViewById(R.id.btnAyudanos);
 
         btnHorarios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, HorariosActivity.class));
+            }
+        });
+
+        btnAyudanos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Rating.class));
             }
         });
 
