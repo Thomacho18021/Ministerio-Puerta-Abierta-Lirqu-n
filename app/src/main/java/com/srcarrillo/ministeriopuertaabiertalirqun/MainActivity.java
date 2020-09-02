@@ -2,6 +2,7 @@ package com.srcarrillo.ministeriopuertaabiertalirqun;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox cbAmarillo ;
     private CheckBox cbRojo ;
     private CheckBox cbVerde ;
+    private Button btnHorarios;
 
 
 
@@ -36,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
         cbAmarillo = findViewById(R.id.cbAmarillo);
         cbRojo = findViewById(R.id.cbRojo);
         cbVerde = findViewById(R.id.cbVerde);
+        btnHorarios = findViewById(R.id.btnHorarios);
+
+        btnHorarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, HorariosActivity.class));
+            }
+        });
 
 
     }
@@ -64,4 +74,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Selecciona un Color", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }
