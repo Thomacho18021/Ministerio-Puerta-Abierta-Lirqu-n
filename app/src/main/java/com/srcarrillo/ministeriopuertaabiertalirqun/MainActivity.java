@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnAyudanos.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View opinion) {
                 startActivity(new Intent(MainActivity.this, Rating.class));
             }
         });

@@ -43,12 +43,15 @@
 
     <Button
         android:id="@+id/btnEnviar"
+        style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Enviar"
+        android:stateListAnimator="@android:anim/slide_in_left"
         android:text="enviar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputComentario" />
 
@@ -77,15 +80,26 @@
 
     <EditText
         android:id="@+id/inputComentario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="210dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/txtComentario"
         app:layout_constraintTop_toBottomOf="@+id/inputNombre"
         tools:text="Escribe aquí tu comentario..." />
+
+    <RatingBar
+        android:id="@+id/rbAyudanos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputComentario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
