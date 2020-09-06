@@ -3,7 +3,9 @@ package com.srcarrillo.ministeriopuertaabiertalirqun;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +19,6 @@ public class Rating extends AppCompatActivity {
     private EditText inputNombre, inputComentario;
     private Button btnRatingVolver, btnEnviar;
     private RatingBar rbAyudanos;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +38,34 @@ public class Rating extends AppCompatActivity {
             }
         });
 
+        btnEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarEmail(inputNombre.getText().toString()+":\n"+inputComentario.getText().toString()+"\n"+rbAyudanos.getRating());
+            }
+        });
+
     }
-    public void Enviar(View view){
-        Toast.makeText(this, "Muchas Gracias Por Ayudarnos, Bendiciones", Toast.LENGTH_LONG).show();
+    public void enviarEmail(String mensaje){
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+
+
+        String mailto = "mailto:ThomasCarrilloGonzalez@gmail.com" +
+                "?cc=" + "ThomasCarrilloGonzalez@gmail.com" +
+                "&body=" + Uri.encode(mensaje);
+
+        emailIntent.setData(Uri.parse(mailto));
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, "thomascarrillogonzalez@gmail.com"); // * configurar email aquí!
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "App Ministerio Puerta Abierta - Opinión");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, mensaje);
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Enviar email."));
+            Log.i("EMAIL", "Muchas Gracias por ayudarnos, Bendiciones");
+        }
+        catch (android.content.ActivityNotFoundException e) {
+            Toast.makeText(this, "NO existe ningún cliente de email instalado!.", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }
