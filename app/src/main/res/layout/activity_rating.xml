@@ -102,4 +102,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputComentario" />
 
+    <TextView
+        android:id="@+id/txtRatingMal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:text="No me gustó"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbAyudanos" />
+
+    <TextView
+        android:id="@+id/txtRatingBien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="49dp"
+        android:text="Me gustó"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtRatingMal"
+        app:layout_constraintTop_toBottomOf="@+id/rbAyudanos" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

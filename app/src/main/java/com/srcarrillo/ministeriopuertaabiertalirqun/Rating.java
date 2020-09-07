@@ -41,7 +41,7 @@ public class Rating extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarEmail(inputNombre.getText().toString()+":\n"+inputComentario.getText().toString()+"\n"+rbAyudanos.getRating());
+                enviarEmail(inputNombre.getText().toString()+":\n"+inputComentario.getText().toString()+"\n"+rbAyudanos.getRating()+" Estrellas");
             }
         });
 
@@ -51,7 +51,7 @@ public class Rating extends AppCompatActivity {
 
 
         String mailto = "mailto:ThomasCarrilloGonzalez@gmail.com" +
-                "?cc=" + "ThomasCarrilloGonzalez@gmail.com" +
+                "?cc=" + " " +
                 "&body=" + Uri.encode(mensaje);
 
         emailIntent.setData(Uri.parse(mailto));
