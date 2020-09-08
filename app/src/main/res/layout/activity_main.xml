@@ -6,39 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/cbAmarillo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Amarillo"
-        app:layout_constraintBottom_toTopOf="@+id/cbRojo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cbNegro"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
-    <CheckBox
-        android:id="@+id/cbVerde"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Verde"
-        app:layout_constraintBottom_toTopOf="@+id/btnCambiar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cbAzul"
-        app:layout_constraintTop_toBottomOf="@+id/cbRojo" />
-
-    <CheckBox
-        android:id="@+id/cbRojo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rojo"
-        app:layout_constraintBottom_toTopOf="@+id/cbVerde"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cbBlanco"
-        app:layout_constraintTop_toBottomOf="@+id/cbAmarillo" />
-
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
@@ -47,56 +14,11 @@
         android:text="Ministerio Puerta Abierta"
         android:textColor="#000000"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAyudanos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnCambiar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Cambio"
-        android:text="Cambiar Color"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
-    <CheckBox
-        android:id="@+id/cbNegro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Negro"
-        app:layout_constraintBottom_toTopOf="@+id/cbBlanco"
-        app:layout_constraintEnd_toStartOf="@+id/cbAmarillo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
-    <CheckBox
-        android:id="@+id/cbAzul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Azul"
-        app:layout_constraintBottom_toTopOf="@+id/btnCambiar"
-        app:layout_constraintEnd_toStartOf="@+id/cbVerde"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbBlanco" />
-
-    <CheckBox
-        android:id="@+id/cbBlanco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/cbAzul"
-        app:layout_constraintEnd_toStartOf="@+id/cbRojo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbNegro" />
 
     <Button
         android:id="@+id/btnHorarios"
@@ -107,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCambiar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAyudanos" />
 
     <Button
         android:id="@+id/btnAyudanos"
@@ -118,6 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCambiar" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
