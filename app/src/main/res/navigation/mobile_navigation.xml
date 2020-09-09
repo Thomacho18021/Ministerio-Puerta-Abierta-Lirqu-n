@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.srcarrillo.ministeriopuertaabiertalirqun.ui.home.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_biblia"
+        android:name="com.srcarrillo.ministeriopuertaabiertalirqun.ui.gallery.GalleryFragment"
+        android:label="Biblia"
+        tools:layout="@layout/fragment_biblia" />
+
+    <fragment
+        android:id="@+id/nav_radio"
+        android:name="com.srcarrillo.ministeriopuertaabiertalirqun.ui.slideshow.SlideshowFragment"
+        android:label="Radio Restauración Lirquén"
+        tools:layout="@layout/fragment_radio" />
+
+    <fragment
+        android:id="@+id/nav_programas"
+        android:name="com.srcarrillo.ministeriopuertaabiertalirqun.ui.slideshow.SlideshowFragment"
+        android:label="Programas"
+        tools:layout="@layout/fragment_programas" />
+
+    <fragment
+        android:id="@+id/nav_rating"
+        android:name="com.srcarrillo.ministeriopuertaabiertalirqun.ui.slideshow.SlideshowFragment"
+        android:label="Ayudanos"
+        tools:layout="@layout/fragment_rating" />
+</navigation>

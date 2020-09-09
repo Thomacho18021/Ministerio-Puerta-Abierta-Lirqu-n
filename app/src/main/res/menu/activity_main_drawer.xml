@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_biblia"
+            android:icon="@drawable/biblia"
+            android:title="Biblia" />
+        <item
+            android:id="@+id/nav_radio"
+            android:icon="@drawable/radio"
+            android:title="Radio Restauración Lirquén" />
+        <item
+            android:id="@+id/nav_programas"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Programas" />
+        <item
+            android:id="@+id/nav_rating"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Ayudanos" />
+    </group>
+</menu>

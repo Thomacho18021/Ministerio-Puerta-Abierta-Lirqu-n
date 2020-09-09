@@ -14,7 +14,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private TextView txtTitulo;
-    private Button btnCambiar;
     private CheckBox cbNegro, cbBlanco, cbAzul, cbAmarillo, cbRojo, cbVerde ;
     private Button btnHorarios, btnAyudanos;
 
@@ -26,13 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtTitulo = findViewById(R.id.txtTitulo);
-        btnCambiar = findViewById(R.id.btnCambiar);
-        cbNegro = findViewById(R.id.cbNegro);
-        cbBlanco = findViewById(R.id.cbBlanco);
-        cbAzul = findViewById(R.id.cbAzul);
-        cbAmarillo = findViewById(R.id.cbAmarillo);
-        cbRojo = findViewById(R.id.cbRojo);
-        cbVerde = findViewById(R.id.cbVerde);
         btnHorarios = findViewById(R.id.btnHorarios);
         btnAyudanos = findViewById(R.id.btnAyudanos);
 
